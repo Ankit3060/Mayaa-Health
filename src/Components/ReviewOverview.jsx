@@ -7,7 +7,7 @@ const ReviewOverview = () => {
   return (
     <div className="w-full flex flex-col items-center px-4 md:px-8 lg:px-0 mt-25">
       {/* Top text */}
-      <h2 className="text-center text-[#0A2E36] text-sm md:text-base lg:text-lg font-medium mb-4">
+      <h2 className="text-center text-[#0A2E36] text-sm md:text-base lg:text-lg font-juanaMedium mb-4">
         Your Health, Our Reach - Backed by a Strong Nationwide Presence
       </h2>
 
@@ -17,33 +17,33 @@ const ReviewOverview = () => {
         style={{ backgroundColor: "#31B07B", height: "139.75px" }}
       >
         <div className="flex flex-col items-center px-4 my-2">
-          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-bold">
+          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-gilroyHeavy">
             20,000+
           </span>
-          <span className="text-sm md:text-base">Network Hospitals</span>
+          <span className="text-sm md:text-base font-gilroyMedium">Network Hospitals</span>
         </div>
         <div className="flex flex-col items-center px-4 my-2">
-          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-bold">
+          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-gilroyHeavy">
             32,000+
           </span>
-          <span className="text-sm md:text-base">Doctors Empaneled</span>
+          <span className="text-sm md:text-base font-gilroyMedium">Doctors Empaneled</span>
         </div>
         <div className="flex flex-col items-center px-4 my-2">
-          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-bold">
+          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-gilroyHeavy">
             2477
           </span>
-          <span className="text-sm md:text-base">Diagnostic Centers</span>
+          <span className="text-sm md:text-base" font-gilroyMedium>Diagnostic Centers</span>
         </div>
         <div className="flex flex-col items-center px-4 my-2">
-          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-bold">
+          <span className="text-[22px] md:text-[26px] lg:text-[32px] font-gilroyHeavy fontweight-20">
             9000+
           </span>
-          <span className="text-sm md:text-base">Pin-codes Services</span>
+          <span className="text-sm md:text-base font-gilroyMedium">Pin-codes Services</span>
         </div>
       </div>
 
       {/* Bottom text */}
-      <h3 className="text-center text-[#0A2E36] text-sm md:text-base mt-6 mb-4">
+      <h3 className="text-center text-[#0A2E36] text-sm md:text-base mt-6 mb-4 font-juanaMedium">
         Backed by the trust and assurance of the top insurers
       </h3>
 

@@ -13,7 +13,7 @@ const Trusted = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h2 className="text-xl md:text-3xl text-gray-800">
+          <h2 className="text-xl md:text-3xl text-gray-800 font-juanaMedium">
             Trusted by Top Universities And Colleges
           </h2>
         </div>

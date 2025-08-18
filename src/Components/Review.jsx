@@ -8,106 +8,74 @@ import Ellipse6 from "../assets/Ellipse6.webp";
 import Ellipse7 from "../assets/Ellipse7.webp";
 
 const reviews = [
-  {
-    img: Ellipse1,
-    name: "Ramesh Chopra",
-    location: "Parent, Pune",
-    text: "We were skeptical. Then my daughter used the plan within 10 days. Doctor, therapy, checkup — all sorted."
-  },
-  {
-    img: Ellipse2,
-    name: "Sunita",
-    location: "Parent, Chandigarh",
-    text: "I was constantly worried about my son falling sick in a new city. With Mayaa, he had doctor access immediately."
-  },
-  {
-    img: Ellipse3,
-    name: "Priya",
-    location: "Parent, Jaipur",
-    text: "My daughter had her first anxiety episode during exams. I didn’t know who to call. The mental health support in the Mayaa plan stepped in when we couldn’t. Grateful."
-  },
-  {
-    img: Ellipse4,
-    name: "Ashok",
-    location: "Parent, Delhi",
-    text: "One call to Mayaa, and we had a full body check-up and more for my son in his hostel. No stress, no delays. This is real care."
-  },
-  {
-    img: Ellipse5,
-    name: "Deepak",
-    location: "Parent, Ludhiana",
-    text: "My son is not great at telling us when something’s wrong. Mayaa caught an early health issue during a routine check-up. Now I feel safer."
-  },
-  {
-    img: Ellipse6,
-    name: "Nirmala",
-    location: "Parent, Indore",
-    text: "I thought these plans were just marketing talk. But when my daughter had a bad throat and fever, Mayaa helped us get tests done the same day. We got the results and treatment without wasting time."
-  },
-  {
-    img: Ellipse7,
-    name: "Neena",
-    location: "Parent, Lucknow",
-    text: "The first month of college, my son called because he was sick. We used the Mayaa consult line — it worked like magic. No running around, no stress for him or me."
-  },
+  { img: Ellipse1, name: "Ramesh Chopra", location: "Parent, Pune", text: "We were skeptical. Then my daughter used the plan within 10 days. Doctor, therapy, checkup — all sorted." },
+  { img: Ellipse2, name: "Sunita", location: "Parent, Chandigarh", text: "I was constantly worried about my son falling sick in a new city. With Mayaa, he had doctor access immediately." },
+  { img: Ellipse3, name: "Priya", location: "Parent, Jaipur", text: "My daughter had her first anxiety episode during exams. I didn’t know who to call. The mental health support in the Mayaa plan stepped in when we couldn’t. Grateful." },
+  { img: Ellipse4, name: "Ashok", location: "Parent, Delhi", text: "One call to Mayaa, and we had a full body check-up and more for my son in his hostel. No stress, no delays. This is real care." },
+  { img: Ellipse5, name: "Deepak", location: "Parent, Ludhiana", text: "My son is not great at telling us when something’s wrong. Mayaa caught an early health issue during a routine check-up. Now I feel safer." },
+  { img: Ellipse6, name: "Nirmala", location: "Parent, Indore", text: "I thought these plans were just marketing talk. But when my daughter had a bad throat and fever, Mayaa helped us get tests done the same day. We got the results and treatment without wasting time." },
+  { img: Ellipse7, name: "Neena", location: "Parent, Lucknow", text: "The first month of college, my son called because he was sick. We used the Mayaa consult line — it worked like magic. No running around, no stress for him or me." },
 ];
 
+const CARD_WIDTH = 420;
+const CARD_HEIGHT = 270;
+
 const Review = () => {
+  const cardClass =
+    "bg-white p-8 rounded-xl shadow-lg mx-8 flex-shrink-0 flex flex-col justify-start items-start";
+  const cardStyle = { width: `${CARD_WIDTH}px`, height: `${CARD_HEIGHT}px` };
+
   return (
-    <div className="relative bg-gradient-to-r from-green-400 to-teal-500 py-12 overflow-hidden">
-      <h2 className="text-white text-2xl sm:text-3xl font-bold text-center mb-8 leading-snug">
+    <div className="relative bg-gradient-to-r from-green-400 to-teal-500 py-4 overflow-hidden">
+      <h2 className="text-white text-3xl sm:text-4xl font-bold text-center mb-12 font-juanaMedium">
         Read Honest Reviews of what <br className="hidden sm:block" /> Customers Say About Us!
       </h2>
 
-      {/* Row 1 - moves right */}
-      <div className="flex overflow-hidden">
-        <div className="flex animate-scroll-right">
+      {/* Top row */}
+      <div className="relative flex overflow-x-hidden">
+        <div className="flex animate-scroll-right" style={{ width: "100%" }}>
           {[...reviews.slice(0, 4), ...reviews.slice(0, 4)].map((review, i) => (
-            <div
-              key={i}
-              className="bg-white w-64 sm:w-72 h-auto sm:h-48 p-4 rounded-lg shadow-md mx-2 sm:mx-4 flex-shrink-0"
-            >
-              <div className="flex items-center mb-2">
-                <img
-                  src={review.img}
-                  alt={review.name}
-                  className="w-10 h-10 rounded-full mr-3"
-                />
-                <div>
-                  <p className="font-bold text-sm sm:text-base">{review.name}</p>
-                  <p className="text-xs sm:text-sm text-gray-500">{review.location}</p>
+            <div key={i} className={cardClass} style={cardStyle}>
+              <div className="flex flex-row items-center w-full mb-2">
+                <img src={review.img} alt={review.name} className="w-16 h-16 rounded-full mr-4" />
+                <div className="flex flex-col items-start">
+                  <span className="font-bold text-xl">{review.name}</span>
+                  <span className="text-lg text-gray-500">{review.location}</span>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base">{review.text}</p>
+              <p className="text-gray-500 text-lg mt-2 text-left w-full font-medium">{review.text}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Row 2 - moves left */}
-      <div className="flex overflow-hidden mt-6">
-        <div className="flex animate-scroll-left">
+      {/* Bottom row */}
+      <div className="relative flex overflow-x-hidden mt-12">
+        <div className="flex animate-scroll-left" style={{ width: "100%" }}>
           {[...reviews.slice(4), ...reviews.slice(4)].map((review, i) => (
-            <div
-              key={i}
-              className="bg-white w-64 sm:w-72 h-auto sm:h-48 p-4 rounded-lg shadow-md mx-2 sm:mx-4 flex-shrink-0"
-            >
-              <div className="flex items-center mb-2">
-                <img
-                  src={review.img}
-                  alt={review.name}
-                  className="w-10 h-10 rounded-full mr-3"
-                />
-                <div>
-                  <p className="font-bold text-sm sm:text-base">{review.name}</p>
-                  <p className="text-xs sm:text-sm text-gray-500">{review.location}</p>
+            <div key={i} className={cardClass} style={cardStyle}>
+              <div className="flex flex-row items-center w-full mb-2">
+                <img src={review.img} alt={review.name} className="w-16 h-16 rounded-full mr-4" />
+                <div className="flex flex-col items-start">
+                  <span className="font-bold text-xl">{review.name}</span>
+                  <span className="text-lg text-gray-500">{review.location}</span>
                 </div>
               </div>
-              <p className="text-gray-600 text-sm sm:text-base">{review.text}</p>
+              <p className="text-gray-700 text-lg mt-2 text-left w-full font-medium">{review.text}</p>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Greenish blur overlay at the very bottom, covering full height of bottom cards */}
+      <div
+        className="pointer-events-none absolute left-0 bottom-0 w-full z-50"
+        style={{
+          height: "360px", // Should match or slightly exceed CARD_HEIGHT + mt-14 (adjust as needed!)
+          background:
+            "linear-gradient(to top, rgba(45,197,153,0.95) 2%, rgba(45,197,153,0.88) 40%, rgba(45,197,153,0.26) 90%, rgba(45,197,153,0.01) 100%)"
+        }}
+      />
     </div>
   );
 };
