@@ -5,6 +5,7 @@ import Pop from '../Components/Pop.jsx'
 import Review from '../Components/Review.jsx'
 import ReviewOverview from '../Components/ReviewOverview.jsx'
 import Working from '../Components/Working.jsx'
+import Form from '../Components/Form.jsx'
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
       <Pop/>
       <Trusted/>
       <Review/>
+      <Form/>
       <ReviewOverview/>
       <Working/>
     </div>
